@@ -76,6 +76,7 @@ int[] list = {1,2,4,5,6,2};
     - setLength(len: int)
     - substring(startIndex: int, endIndex: int)
     - trimToSize()
+    
 
 
 ## 类
