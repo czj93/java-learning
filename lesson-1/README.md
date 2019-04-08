@@ -81,16 +81,31 @@ public class GenericMethodDemo{
 
     }
 
+    // 简单示例
     public static <E> void print(E[] list){
         System.out.print(list.toString());
+    }
+
+    // 示例2
+    // 第一个 <T> , 表示此方法为泛型方法， 只有在此声明了 <T> 才能在方法中 使用泛型类型 T
+    // 使用泛型成员的方法并不一定是 泛型方法 
+    public <T> T genericMethod(ArrayList<T> list){
+        return list
     }
 
 }
 
 ``` 
 
+### 通配泛型： 非受限泛型 受限通配 下限通配
+
+    用于给 泛型类型实参指定范围
+
+### 类型消除
+
 ### 注意
     - 泛型类型必须是引用类型
     - 不能使用使用泛型类型参数创建实例。 例如： E o = new E(); 详情见P12
     - 静态上下文中不允许类的参数是泛型类型。 例如： public static E o; public static void m(E o){};
+    - 静态方法要使用泛型类型，需要将方法声明未泛型方法。 例如： public static <E> void m(E o){};
     - 异常类不能是泛型。
