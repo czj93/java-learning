@@ -99,9 +99,52 @@ public class GenericMethodDemo{
 
 ### 通配泛型： 非受限泛型 受限通配 下限通配
 
-    用于给 泛型类型实参指定范围
+    用于给 泛型类型实参指定范围, 使类型实参只能是规定范围内的类型
+
+``` 
+    public void method1(Generic<? extends Number> o){
+        // method1 只接受 继承至 Number 的 实参类型
+    }
+
+    public void method2(Generic<? super Number> o){
+        // 泛型类型必须实 Number 的父类
+    }
+```
 
 ### 类型消除
+
+    编译器可以使用类型信息，但是这些信息在运行时是不可用的。
+    编译器使用泛型信息来编译代码，但是随后会消除它，泛型信息在运行时是不存在的，这种方法可以是泛型代码兼容使用原始类型的遗留代码。
+    编译器在 编译泛型方法 类时，会检测泛型类型是否使用正确，检测通过，就会将泛型类型转换为原始类型。
+
+```
+ArrayList<String> list = new ArrayList<>();
+list.add("heelo");
+String text = list.get(0);
+
+// ====
+
+ArrayLis list = new ArrayList();
+list.add('Hello);
+String text = (String)list.get(0);
+```
+
+```
+public static <E> void print(E[] list){}
+
+// ===
+
+public static void print(Object[] list)
+```
+
+// 受限泛型转换
+```
+public static <E extends Number> boolean equal(E num1, E num2){}
+
+// ====
+
+public static boolean equal(Number num1, Number num2){}
+```
 
 ### 注意
     - 泛型类型必须是引用类型
@@ -109,3 +152,4 @@ public class GenericMethodDemo{
     - 静态上下文中不允许类的参数是泛型类型。 例如： public static E o; public static void m(E o){};
     - 静态方法要使用泛型类型，需要将方法声明未泛型方法。 例如： public static <E> void m(E o){};
     - 异常类不能是泛型。
+    - 泛型方法 和 泛型类型 添加上下边界，必须和泛型申明在一起。详情见 GenericTest 中 Generic 类的 method2 和 method3
