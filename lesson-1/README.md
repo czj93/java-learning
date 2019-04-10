@@ -25,7 +25,7 @@
     泛型不是必须的，可以将元素类型设置成 Object， 一样可以容纳任何对象。
     但是使用泛型可以使某些错误在编译阶段就被检出，提高程序的可靠性。 
 
-```
+```Java
 // 新建一个 保存String的ArrayList 
 ArrayList<String> list = new ArrayLIst<>(); 
 
@@ -36,7 +36,7 @@ ArrayList<Integer> list1 = new ArrayList<>();
 
 ### 定义泛型类和方法
 
-```
+```Java
 // 定义一个泛型栈类
     public class GenericStack<E> {
         private ArrayList<E> list = new ArrayList<>();
@@ -66,7 +66,7 @@ ArrayList<Integer> list1 = new ArrayList<>();
     }
 ```
 
-```
+```Java
 // 泛型方法
 public class GenericMethodDemo{
     public static void main(String[] args){
@@ -101,7 +101,7 @@ public class GenericMethodDemo{
 
     用于给 泛型类型实参指定范围, 使类型实参只能是规定范围内的类型
 
-``` 
+``` Java
     public void method1(Generic<? extends Number> o){
         // method1 只接受 继承至 Number 的 实参类型
     }
@@ -117,7 +117,7 @@ public class GenericMethodDemo{
     编译器使用泛型信息来编译代码，但是随后会消除它，泛型信息在运行时是不存在的，这种方法可以是泛型代码兼容使用原始类型的遗留代码。
     编译器在 编译泛型方法 类时，会检测泛型类型是否使用正确，检测通过，就会将泛型类型转换为原始类型。
 
-```
+```Java
 ArrayList<String> list = new ArrayList<>();
 list.add("heelo");
 String text = list.get(0);
@@ -129,7 +129,7 @@ list.add('Hello);
 String text = (String)list.get(0);
 ```
 
-```
+```Java
 public static <E> void print(E[] list){}
 
 // ===
@@ -138,7 +138,7 @@ public static void print(Object[] list)
 ```
 
 // 受限泛型转换
-```
+```Java
 public static <E extends Number> boolean equal(E num1, E num2){}
 
 // ====

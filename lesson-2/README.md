@@ -3,7 +3,7 @@
 
 1. 定义一个数组
 
-```
+```Java
 elementType[] arrayVar;
 elementType attayVar[];
 
@@ -11,14 +11,11 @@ elementType attayVar[];
 
 int[] list;
 int list[];
-
-
 ```
 
 2. 创建一个数组
 
-```
-
+```Java
 new elementType[ArraySize];
 
 int[] list = new elementType[10];
@@ -26,13 +23,13 @@ int[] list = new elementType[10];
 // 数组初始化
 
 int[] list = {1,2,4,5,6,2};
-
 ```
 
 
 3. Arrays 类
 
     常用方法：
+    
         - sort(Array)
         - binarySearch(Array)
         - equals(Array1, Aray2)
@@ -97,9 +94,8 @@ ArrayList(Collection o);
 
 ### 数组 -》 列表
 
-···
+```Java
 String[] str = { "a", "b", "vvv" };
 
 ArrayList<String> list = new ArrayList<>(Arrays.asList(str));
-
-···
+```
