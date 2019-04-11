@@ -20,6 +20,7 @@ public class ServletAnnotationTest extends HttpServlet {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
         out.println("<p>Test ServletAnnotation</p>");
+        out.close();
     }
 
 }

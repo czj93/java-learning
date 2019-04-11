@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class HelloWorld extends HttpServlet {
 
     @Override
-    public void init() throws{
+    public void init(){
         System.out.println("Init Hello world");
     }
 
@@ -20,6 +20,7 @@ public class HelloWorld extends HttpServlet {
         //设置逻辑实现
         PrintWriter out = res.getWriter();
         out.println("<h3>Hello World</h3>");
+        out.close();
     }
 
     @Override
