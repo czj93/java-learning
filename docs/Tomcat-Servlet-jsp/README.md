@@ -10,4 +10,7 @@
 
 
 ### 代码示例
-- src/HelloWorld.java
+- [一个简单的请求](../../lesson-4/src/HelloWorld.java)
+- [WebServlet注解](../../lesson-4/src/ServletAnnotation.java)
+- [Servlet生命周期](../../lesson-4/src/ServletLife.java)
+- [下载文件](../../lesson-4/src/DownloadFile.java)
