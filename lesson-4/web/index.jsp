@@ -18,7 +18,8 @@
         <li><a href="./hello" target="_blank">hello world</a></li>
         <li><a href="./annotation-test" target="_blank">测试WebServlet注解</a></li>
         <li><a href="./hello?username=world" target="_blank">页面传递参数</a></li>
-        <li><a href="./servlet-life">测试servlet 生命周期</a></li>
+        <li><a href="./servlet-life" target="_blank">测试servlet 生命周期</a></li>
+        <li><a href="./download-file?filename=README.md">README 文件下载</a></li>
     </ul>
   </body>
 </html>
