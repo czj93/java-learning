@@ -20,6 +20,7 @@
         <li><a href="./hello?username=world" target="_blank">页面传递参数</a></li>
         <li><a href="./servlet-life" target="_blank">测试servlet 生命周期</a></li>
         <li><a href="./download-file?filename=README.md">README 文件下载</a></li>
+        <li><a href="./test-upload.jsp">文件上传</a></li>
     </ul>
   </body>
 </html>
