@@ -20,8 +20,10 @@ public class HelloWorld extends HttpServlet {
         //设置逻辑实现
         PrintWriter out = res.getWriter();
         out.println("<h3>Hello World</h3>");
+
         out.close();
     }
+
 
     @Override
     public void destroy() {

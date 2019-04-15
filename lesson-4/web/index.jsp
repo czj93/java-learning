@@ -21,6 +21,7 @@
         <li><a href="./servlet-life" target="_blank">测试servlet 生命周期</a></li>
         <li><a href="./download-file?filename=README.md">README 文件下载</a></li>
         <li><a href="./test-upload.jsp">文件上传</a></li>
+        <li><a href="./cookie">Cookie操作</a></li>
     </ul>
   </body>
 </html>
