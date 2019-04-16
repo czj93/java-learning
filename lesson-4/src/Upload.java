@@ -36,9 +36,9 @@ public class Upload extends HttpServlet {
 
         if(ServletFileUpload.isMultipartContent(req)){
             try{
-                List<FileItem> list = upload.parseRequest(req);
+                List<FileItem> list = upload.parseRequest(req); // 获取所有的表单数据
                 for (FileItem item : list) {
-                    if(item.isFormField()){
+                    if(item.isFormField()){ // 判断是否是文本数据
                         String name = item.getFieldName();
                         String value = item.getString("UTF-8");
                         System.out.println(name + " : " + value);

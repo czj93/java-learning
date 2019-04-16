@@ -19,8 +19,11 @@ public class HelloWorld extends HttpServlet {
         res.setContentType("text/html");
         //设置逻辑实现
         PrintWriter out = res.getWriter();
+        String username = req.getParameter("username");
         out.println("<h3>Hello World</h3>");
-
+        if(username != null){
+            out.println("<p>" + username + "</p>");
+        }
         out.close();
     }
 
