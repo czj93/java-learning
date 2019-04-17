@@ -23,6 +23,7 @@
         <li><a href="./test-upload.jsp">文件上传</a></li>
         <li><a href="./cookie">Cookie操作</a></li>
         <li><a href="./request-dispatch?from=index">请求转发</a></li>
+        <li><a href="./special/">专题页 静态html</a></li>
     </ul>
   </body>
 </html>
