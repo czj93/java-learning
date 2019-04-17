@@ -11,6 +11,7 @@
     <title>Tomcat+Servlet java应用</title>
   </head>
   <body>
+    <%@ include file="common/header.jsp"%>
     <p>Hello World</p>
     <ul>
         <li><a href="./servlet">servlet test Page</a></li>
@@ -29,5 +30,6 @@
             <img width="400" src="./static/img/woman.jpeg" alt="">
         </a></li>
     </ul>
+    <%@ include file="common/footer.jsp" %>
   </body>
 </html>
