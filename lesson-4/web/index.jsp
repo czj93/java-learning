@@ -24,6 +24,10 @@
         <li><a href="./cookie">Cookie操作</a></li>
         <li><a href="./request-dispatch?from=index">请求转发</a></li>
         <li><a href="./special/">专题页 静态html</a></li>
+        <li><a href="/helloworld/static/img/woman.jpeg" target="_blank">
+            <p>插入静态资源</p>
+            <img width="400" src="./static/img/woman.jpeg" alt="">
+        </a></li>
     </ul>
   </body>
 </html>
